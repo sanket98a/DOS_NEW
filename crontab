@@ -1,0 +1,6 @@
+
+# Run dos_run.py every 10 minutes
+* * * * * /usr/local/bin/python  /app/dos_run.py -i /motioneye/Camera3/ -f 120 > /proc/1/fd/1 2>/proc/1/fd/2
+
+# Run summerize_run.py every 30 minutes
+* * * * * /usr/local/bin/python  /app/summerizer_run.py -i /motioneye/Camera3/ -f 120 > /proc/1/fd/1 2>/proc/1/fd/2

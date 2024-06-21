@@ -1,0 +1,15 @@
+FROM python:3.10-slim
+
+# Set the working directory
+WORKDIR /app
+
+COPY . .
+
+RUN pip install --upgrade pip
+
+# Install any needed packages specified in requirements.txt
+RUN pip install -r requirements.txt
+
+
+# CMD to start Streamlit and cron services
+CMD python run dos_run.py
